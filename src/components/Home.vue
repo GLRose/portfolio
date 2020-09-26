@@ -1,10 +1,9 @@
 <template>
   <div class="home">
-    {{ pokemon }}
     <h1>Welcome to my website!</h1>
     <p>
       My name is Garrett Rose. I am a self taught web developer from Charlotte,
-      North Carolina. I am for hire.
+      North Carolina. I am for hire. Rather than bore you with 
     </p>
     <img src="../pics/profilePic.jpg" alt="vue logo" /><br />
     <a href="https://github.com/GLRose">Github</a>
@@ -12,33 +11,27 @@
 </template>
 
 <script>
-import axios from "axios";
-
 export default {
   name: "Home",
   props: {
     msg: String,
   },
-  data() {
-    return {
-      pokemon: {},
-    };
-  },
-  created() {
-    axios
-      .get("https://pokeapi.co/api/v2/pokedex/kanto/")
-      .then((response) => {
-        console.log(response);
-        for (var x = 0; x < response.data.pokemon_entries.length; x++) {
-          this.pokemon = response.data.pokemon_entries[x].pokemon_species.name;
-          // console.log(response.data.pokemon_entries[x].pokemon_species.name)
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  },
+  components: {
+      
+  }
 };
+
+const axios = require("axios")
+
+axios.post("http://localhost:8080/", {
+  title: "foo",
+  body: "bar",
+  userId: 1
+}).then(function(response) {
+  console.log(response.data)
+}).catch(function(error) {
+  console.log(error)
+})
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -59,6 +52,10 @@ a {
 }
 
 img {
-  border: 5px solid #555;
+  border: 10px solid #555;
+}
+
+form {
+  margin-top: 20px;
 }
 </style>

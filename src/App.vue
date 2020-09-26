@@ -1,7 +1,5 @@
 <template>
   <div id="app">
-    <input v-model="message" placeholder="edit me" />
-    <p>{{ message }}</p>
     <ul>
       <li><router-link to="/">Home</router-link></li>
       <li><router-link to="about">About</router-link></li>
@@ -12,17 +10,8 @@
 
 <script>
 //registering our components so we can embed them like "<> </>"
-
 export default {
-  name: "App",
-  components: {
 
-  },
-  data() {
-    return {
-      message: "",
-    };
-  },
 };
 </script>
 
@@ -35,14 +24,9 @@ export default {
   color: #2c3e50;
 }
 
-/* li {
-  list-style: none;
-  margin: 60px;
-  display: inline;
-} */
-
 ul {
   list-style-type: none;
+  width: auto;
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -57,7 +41,7 @@ li a {
   display: block;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 18px 18px;
   text-decoration: none;
 }
 
