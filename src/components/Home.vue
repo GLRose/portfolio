@@ -3,7 +3,7 @@
     <h1>Welcome to my website!</h1>
     <p>
       My name is Garrett Rose. I am a self taught web developer from Charlotte,
-      North Carolina. I am for hire. Rather than bore you with 
+      North Carolina. I am for hire. 
     </p>
     <img src="../pics/profilePic.jpg" alt="vue logo" /><br />
     <a href="https://github.com/GLRose">Github</a>
